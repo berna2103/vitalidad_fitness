@@ -1,0 +1,59 @@
+
+  .superNav {
+    font-size:10px;
+    letter-spacing: .1rem;
+  }
+  .topbaritem:hover {
+    text-decoration: underline;
+  }
+  .active {
+    background-color: black;
+    color: aliceblue !important;
+    text-decoration:underline !important;
+    margin: 1rem;
+  }
+  .form-control {
+    outline:none !important;
+    box-shadow: none !important;
+  }
+  .bi{
+    font-size: 1rem;
+    padding-right: .2rem;
+  }
+
+  .logo{
+    height: 40px;
+    width: auto;
+  }
+
+  #dropdown{
+    /* font-family:'Roboto', sans-serif !important; */
+    /* font-size: large; */
+    color: white !important;
+  }
+
+  .dropdownitem{
+    /* font-family:'Roboto', sans-serif !important; */
+    /* font-size: large; */
+    color: black !important;
+  }
+
+  .navitem{
+    color: white !important;
+    /* font-family:'Roboto', sans-serif !important; */
+    /* font-size: large; */
+  }
+
+
+  .navitem:hover{
+    background-color: white;
+    color: black !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  @media screen and (max-width:760px){
+    .centerOnMobile {
+      text-align:center
+    }
+  }

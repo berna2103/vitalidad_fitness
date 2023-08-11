@@ -1,0 +1,9 @@
+.truncatetext {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* Set the number of lines you want to display */
+    -webkit-line-clamp: 3;
+    /* Set the height of the container based on the line-height and number of lines */
+    height: 2 * 1.2em;
+  }

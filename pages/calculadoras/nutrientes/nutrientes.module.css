@@ -1,0 +1,25 @@
+.imagehero {
+    height: 300px;
+    width: 100vw;
+    padding: 0;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  .imagecontainer {
+      height: 100%;
+      width: 100vw;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      object-fit: cover;
+      position: relative;
+    }
+  
+    .imagecontainer img {
+      max-height: 300px;
+      width: auto;
+      object-fit: cover;
+    }
+  

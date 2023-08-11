@@ -1,0 +1,355 @@
+[
+    {
+      "comida": "Desayuno",
+      "alimentos": [
+        {
+          "nombre": "Yogur griego bajo en grasa",
+          "porcion": "1 taza",
+          "proteinas": 10,
+          "carbohidratos": 7,
+          "grasas": 2,
+          "calorias": 100
+        },
+        {
+          "nombre": "Granola",
+          "porcion": "1/4 taza",
+          "proteinas": 4,
+          "carbohidratos": 30,
+          "grasas": 7,
+          "calorias": 160
+        },
+        {
+          "nombre": "Plátano",
+          "porcion": "1",
+          "proteinas": 1,
+          "carbohidratos": 27,
+          "grasas": 0,
+          "calorias": 105
+        },
+        {
+          "nombre": "Arándanos",
+          "porcion": "1/2 taza",
+          "proteinas": 1,
+          "carbohidratos": 10,
+          "grasas": 0,
+          "calorias": 42
+        },
+        {
+          "nombre": "Nueces",
+          "porcion": "1/4 taza",
+          "proteinas": 4,
+          "carbohidratos": 4,
+          "grasas": 18,
+          "calorias": 196
+        }
+      ]
+    },
+    {
+      "comida": "Comida",
+      "alimentos": [
+        {
+          "nombre": "Wrap de pavo",
+          "porcion": "1 unidad",
+          "proteinas": 25,
+          "carbohidratos": 30,
+          "grasas": 15,
+          "calorias": 340
+        },
+        {
+          "nombre": "Tortilla integral",
+          "porcion": "1 unidad",
+          "proteinas": 4,
+          "carbohidratos": 21,
+          "grasas": 3,
+          "calorias": 135
+        },
+        {
+          "nombre": "Aguacate",
+          "porcion": "1/4 unidad",
+          "proteinas": 1,
+          "carbohidratos": 3,
+          "grasas": 7,
+          "calorias": 72
+        },
+        {
+          "nombre": "Manzana",
+          "porcion": "1",
+          "proteinas": 0,
+          "carbohidratos": 19,
+          "grasas": 0,
+          "calorias": 72
+        }
+      ]
+    },
+    {
+      "comida": "Cena",
+      "alimentos": [
+        {
+          "nombre": "Tofu salteado con verduras",
+          "porcion": "100 gr",
+          "proteinas": 8,
+          "carbohidratos": 8,
+          "grasas": 6,
+          "calorias": 114
+        },
+        {
+          "nombre": "Pimientos",
+          "porcion": "1 taza",
+          "proteinas": 1,
+          "carbohidratos": 9,
+          "grasas": 0,
+          "calorias": 40
+        },
+        {
+          "nombre": "Cebolla",
+          "porcion": "1/2 taza",
+          "proteinas": 1,
+          "carbohidratos": 5,
+          "grasas": 0,
+          "calorias": 22
+        },
+        {
+          "nombre": "Calabacín",
+          "porcion": "1 taza",
+          "proteinas": 2,
+          "carbohidratos": 4,
+          "grasas": 0,
+          "calorias": 19
+        },
+        {
+          "nombre": "Espinacas",
+          "porcion": "1 taza",
+          "proteinas": 1,
+          "carbohidratos": 1,
+          "grasas": 0,
+          "calorias": 7
+        },
+        {
+          "nombre": "Salsa de soja",
+          "porcion": "1 cucharada",
+          "proteinas": 0,
+          "carbohidratos": 1,
+          "grasas": 0,
+          "calorias": 9
+        }
+      ]
+    },
+    {
+      "comida": "Día 3: Resto del día",
+      "alimentos": [
+        {
+          "nombre": "Papas al horno",
+          "porcion": "1 mediana",
+          "proteinas": 3,
+          "carbohidratos": 37,
+          "grasas": 0,
+          "calorias": 161
+        },
+        {
+          "nombre": "Crema agria",
+          "porcion": "2 cucharadas",
+          "proteinas": 2,
+          "carbohidratos": 2,
+          "grasas": 10,
+          "calorias": 92
+        },
+        {
+          "nombre": "Fresas",
+          "porcion": "1 taza",
+          "proteinas": 1,
+          "carbohidratos": 12,
+          "grasas": 0,
+          "calorias": 47
+        }
+      ]
+    },
+    {
+      "comida": "Día 4: Resto del día",
+      "alimentos": [
+        {
+          "nombre": "Hummus",
+          "porcion": "1/2 taza",
+          "proteinas": 4,
+          "carbohidratos": 14,
+          "grasas": 8,
+          "calorias": 140
+        },
+        {
+          "nombre": "Zanahorias",
+          "porcion": "1 taza",
+          "proteinas": 1,
+          "carbohidratos": 12,
+          "grasas": 0,
+          "calorias": 50
+        },
+        {
+          "nombre": "Pimientos",
+          "porcion": "1 taza",
+          "proteinas": 1,
+          "carbohidratos": 9,
+          "grasas": 0,
+          "calorias": 40
+        },
+        {
+          "nombre": "Galletas integrales",
+          "porcion": "3 unidades",
+          "proteinas": 2,
+          "carbohidratos": 16,
+          "grasas": 5,
+          "calorias": 100
+        },
+        {
+          "nombre": "Té verde",
+          "porcion": "1 taza",
+          "proteinas": 0,
+          "carbohidratos": 0,
+          "grasas": 0,
+          "calorias": 0
+        }
+      ]
+    },
+    {
+      "comida": "Día 5: Resto del día",
+      "alimentos": [
+        {
+          "nombre": "Sándwich de pavo",
+          "porcion": "2 rebanadas de pan integral",
+          "proteinas": 10,
+          "carbohidratos": 24,
+          "grasas": 5,
+          "calorias": 160
+        },
+        {
+          "nombre": "Pechuga de pavo",
+          "porcion": "2 rebanadas",
+          "proteinas": 15,
+          "carbohidratos": 1,
+          "grasas": 0,
+          "calorias": 70
+        },
+        {
+          "nombre": "Lechuga",
+          "porcion": "1 taza",
+          "proteinas": 1,
+          "carbohidratos": 1,
+          "grasas": 0,
+          "calorias": 5
+        },
+        {
+          "nombre": "Tomate",
+          "porcion": "2 rebanadas",
+          "proteinas": 0,
+          "carbohidratos": 2,
+          "grasas": 0,
+          "calorias": 10
+        },
+        {
+          "nombre": "Mayonesa",
+          "porcion": "1 cucharada",
+          "proteinas": 0,
+          "carbohidratos": 1,
+          "grasas": 10,
+          "calorias": 90
+        },
+        {
+          "nombre": "Zumo de naranja",
+          "porcion": "1 taza",
+          "proteinas": 1,
+          "carbohidratos": 26,
+          "grasas": 0,
+          "calorias": 112
+        }
+      ]
+    },
+    {
+      "comida": "Día 6: Resto del día",
+      "alimentos": [
+        {
+          "nombre": "Pollo a la parrilla",
+          "porcion": "1 pechuga mediana",
+          "proteinas": 50,
+          "carbohidratos": 0,
+          "grasas": 5,
+          "calorias": 231
+        },
+        {
+          "nombre": "Papas al horno",
+          "porcion": "1 mediana",
+          "proteinas": 3,
+          "carbohidratos": 37,
+          "grasas": 0,
+          "calorias": 161
+        },
+        {
+          "nombre": "Ensalada verde",
+          "porcion": "1 taza",
+          "proteinas": 1,
+          "carbohidratos": 5,
+          "grasas": 0,
+          "calorias": 25
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "porcion": "1 cucharada",
+          "proteinas": 0,
+          "carbohidratos": 0,
+          "grasas": 14,
+          "calorias": 120
+        },
+        {
+          "nombre": "Vinagre",
+          "porcion": "1 cucharada",
+          "proteinas": 0,
+          "carbohidratos": 0,
+          "grasas": 0,
+          "calorias": 3
+        }
+      ]
+    },
+    {
+      "comida": "Día 7: Resto del día",
+      "alimentos": [
+        {
+          "nombre": "Tacos de pollo",
+          "porcion": "3 unidades",
+          "proteinas": 30,
+          "carbohidratos": 30,
+          "grasas": 12,
+          "calorias": 285
+        },
+        {
+          "nombre": "Tortillas de maíz",
+          "porcion": "3 unidades",
+          "proteinas": 3,
+          "carbohidratos": 60,
+          "grasas": 2,
+          "calorias": 270
+        },
+        {
+          "nombre": "Guacamole",
+          "porcion": "1/4 taza",
+          "proteinas": 1,
+          "carbohidratos": 3,
+          "grasas": 6,
+          "calorias": 68
+        },
+        {
+          "nombre": "Salsa de tomate",
+          "porcion": "1/4 taza",
+          "proteinas": 1,
+          "carbohidratos": 4,
+          "grasas": 0,
+          "calorias": 20
+        },
+        {
+          "nombre": "Ensalada",
+          "porcion": "1 taza",
+          "proteinas": 1,
+          "carbohidratos": 5,
+          "grasas": 0,
+          "calorias": 25
+        }
+      ]
+    }
+  ]
+  

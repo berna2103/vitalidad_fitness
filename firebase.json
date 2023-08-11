@@ -1,0 +1,74 @@
+{
+  "hosting": {
+    "public": "out",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "destination": "/dietas/[id]",
+        "regex": "^/dietas/([^/]+?)(?:/)?$",
+        "routeKeys": {
+          "nxtPid": "nxtPid"
+        },
+        "namedRegex": "^/dietas/(?<nxtPid>[^/]+?)(?:/)?$"
+      },
+      {
+        "destination": "/dietas/[id]/[slug]",
+        "regex": "^/dietas/([^/]+?)/([^/]+?)(?:/)?$",
+        "routeKeys": {
+          "nxtPid": "nxtPid",
+          "nxtPslug": "nxtPslug"
+        },
+        "namedRegex": "^/dietas/(?<nxtPid>[^/]+?)/(?<nxtPslug>[^/]+?)(?:/)?$"
+      },
+      {
+        "destination": "/articulos/[...id]/index.html",
+        "regex": "^/articulos/(.+?)(?:/)?$",
+        "routeKeys": {
+          "nxtPid": "nxtPid"
+        },
+        "namedRegex": "^/articulos/(?<nxtPid>.+?)(?:/)?$"
+      },
+      {
+        "destination": "/workouts/[id]/index.html",
+        "regex": "^/workouts/([^/]+?)(?:/)?$",
+        "routeKeys": {
+          "nxtPid": "nxtPid"
+        },
+        "namedRegex": "^/workouts/(?<nxtPid>[^/]+?)(?:/)?$"
+      },
+      {
+        "destination": "/workouts/[id]/[...slug]/index.html",
+        "regex": "^/workouts/([^/]+?)/(.+?)(?:/)?$",
+        "routeKeys": {
+          "nxtPid": "nxtPid",
+          "nxtPslug": "nxtPslug"
+        },
+        "namedRegex": "^/workouts/(?<nxtPid>[^/]+?)/(?<nxtPslug>.+?)(?:/)?$"
+      }
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ]
+}

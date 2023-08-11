@@ -1,0 +1,32 @@
+{
+  "name": "virtual-fitness-coach",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.17.0",
+    "@contentful/rich-text-types": "^16.2.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.10.5",
+    "contentful": "^10.3.7",
+    "firebase": "^10.0.0",
+    "firebase-admin": "^11.9.0",
+    "firebase-functions": "^4.4.1",
+    "next": "13.4.9",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "18.2.0",
+    "react-share": "^4.4.1"
+  },
+  "devDependencies": {
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.9",
+    "eslint-plugin-next": "^0.0.0"
+  }
+}

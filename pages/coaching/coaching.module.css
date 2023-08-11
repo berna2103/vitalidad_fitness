@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Adjust this value as needed */
+  }
+  
+  .textContainer {
+    flex: 1;
+    padding-right: 0px; /* Adjust this value for spacing */
+  }
+
+  .image {
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
