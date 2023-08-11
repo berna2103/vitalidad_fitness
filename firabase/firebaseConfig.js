@@ -9,12 +9,12 @@ import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC5eoOQHdogp1SIsDwLUwrIDv8SIDRs_dE",
-  authDomain: "virtual-fitness-coach-2103.firebaseapp.com",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTHDOMAIN,
   projectId: "virtual-fitness-coach-2103",
   storageBucket: "virtual-fitness-coach-2103.appspot.com",
-  messagingSenderId: "1004576734566",
-  appId: "1:1004576734566:web:902bd04e5c0d01dff61ca7"
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
 // Initialize Firebase

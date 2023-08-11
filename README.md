@@ -11,7 +11,8 @@ calculators (BMI, Macros and nutrients).
   - [Installation](#installation)
 
 ## About
-[Vitalidad Fitness](https://vitalidadfitness.com/) is a 
+[Vitalidad Fitness](https://vitalidadfitness.com/) is designed to help people become healthier, by providing free workouts and healthy recipies. Vitalidad Fitness also has some useful
+calculators (BMI, Macros and nutrients).
 
 ## Features
 - [Macros Calculator].
