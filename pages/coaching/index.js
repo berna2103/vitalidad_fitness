@@ -1,15 +1,18 @@
 import React from "react";
 import styles from "./coaching.module.css";
+import Image from "next/image"
 
 export default function Coaching() {
   return (
     <>
       <div>
-        <img
-          className={`imagehero`}
+        <Image 
+          className={`imagehero`}  
+          priority={true}
+          width={100}
+          height={100}
           src="https://cdn.pixabay.com/photo/2017/04/27/08/29/man-2264825_1280.jpg"
-          alt="coaching"
-        />
+          alt="coaching" />
         <div className="container mb-5">
           <h1 className="display-3 mt-4 mb-4">
             Servicios de Coaching Personalizado

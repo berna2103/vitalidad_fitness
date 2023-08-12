@@ -71,7 +71,7 @@ exports.calculateMacros = onCall((request) => {
     protein = Math.round((bmr * proteinRatio) / 4);
     carbs = Math.round((bmr * carbRatio) / 4);
     fat = Math.round((bmr * fatRatio) / 9);
-    BMR = bmr;
+    BMR = Math.round(bmr);
   
     return {
       protein: `${protein}`,

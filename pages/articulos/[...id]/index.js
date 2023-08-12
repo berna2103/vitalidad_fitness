@@ -7,6 +7,7 @@ import BlogAuthor from "../../../Components/BlogAuthor/BlogAuthor";
 import LoadingSpinner from "../../../Components/LoadingSpinner/LoadingSpinner";
 import { useRouter } from "next/router";
 import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, PinterestIcon, PinterestShareButton, TwitterIcon, TwitterShareButton } from "react-share";
+import Image from "next/image";
 
 
 const client = createClient({
@@ -63,7 +64,15 @@ export default function Pid() {
         <LoadingSpinner />
       ) : (
         <div>
-          <img className="imagehero" src={post.imgUrl} alt={post.title}></img>
+          <Image
+            className="imagehero"
+            priority={true}
+            width={100}
+            height={100}
+            src={post.imgUrl}
+            alt={post.title}
+          />
+          {/* <img className="imagehero" src={post.imgUrl} alt={post.title}></img> */}
           <p className="text-muted mx-4">Image source: {post.imgUrlSource}</p>
           <div className="container">
             <div className="row p-4">

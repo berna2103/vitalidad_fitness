@@ -26,7 +26,7 @@ export default function MacrosCard({
       chartType="PieChart"
       data={chartData}
       width={"100%"}
-      height={"400px"}
+      height={"280px"}
     />
       <p className="lead">
         <span className="fw-bold">
@@ -52,8 +52,7 @@ export default function MacrosCard({
         </span>
         {bmr} cals / dia
       </p>
-      <hr></hr>
-      <NewsLetterContactForm></NewsLetterContactForm>
+      {/* <NewsLetterContactForm></NewsLetterContactForm> */}
     </div>
   );
 }

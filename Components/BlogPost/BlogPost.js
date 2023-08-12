@@ -17,6 +17,7 @@ import BlogAuthor from "../BlogAuthor/BlogAuthor";
 import BlogCard from "../BlogCard";
 import BlogPostWithRichText from "../BlogPostWithRichText/BlogPostWithRichText";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import Image from "next/image";
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE,
@@ -73,7 +74,14 @@ export default function BlogPost2() {
         <LoadingSpinner />
       ) : (
         <div>
-          <img className="imagehero" src={post.imgUrl} alt={post.title}></img>
+          <Image
+            className="imagehero"
+            priority={true}
+            width={100}
+            height={100}
+            src={post.imgUrl}
+            alt={post.title}
+          />
           <p className="text-muted mx-4">Image source: {post.imgUrlSource}</p>
           <div className="container">
             <div className="row p-4">
