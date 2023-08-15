@@ -10,7 +10,7 @@ export default function HomeCoachingBanner() {
         </div>
         <div className='container'>
             <div className='row'>
-                <div className='col-lg-4 col-sm-12'>
+                <div className='col-lg-4 col-md-4 col-sm-6'>
                     <div className='card text-center text-dark p-3 mt-4 mb-3'>
                         <p><i className="bi bi-basket2-fill display-3"></i></p>
                         <p className='text-dark display-6'>Nutricion</p>
@@ -24,7 +24,7 @@ export default function HomeCoachingBanner() {
                         <a href='/coaching' className='btn btn-dark'>Mas informacion</a>
                     </div> 
                 </div>
-                <div className='col-lg-4 col-sm-12'>
+                <div className='col-lg-4 col-md-4 col-sm-6'>
                 <div className='card text-center text-dark p-3 mt-4 mb-3'>
                         <p><i className="bi bi-trophy display-3 "></i></p>
                         <p className='text-dark display-6'>Coaching</p>
@@ -37,7 +37,7 @@ export default function HomeCoachingBanner() {
                         <a href='/coaching' className='btn btn-dark'>Mas informacion</a>
                     </div> 
                  </div>
-                <div className='col-lg-4 col-sm-12'>
+                <div className='col-lg-4 col-md-4 col-sm-6'>
                 <div className='card text-center text-dark p-3 mt-4 mb-3'>
                         <p><i className="bi bi-clipboard2-check  display-3 "></i></p>
                         <p className='text-dark display-6'>Entrenamientos</p>

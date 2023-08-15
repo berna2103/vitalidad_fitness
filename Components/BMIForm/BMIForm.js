@@ -47,10 +47,10 @@ const BMIForm = () => {
   };
 
   return (
-    <div className="container bg-light text-center p-3 mt-5 mb-5">
-      <form className="form" onSubmit={handleSubmit}>
+    <div className="container bg-light text-center mt-5 mb-5 pb-3">
+      <form className="form p-3" onSubmit={handleSubmit}>
         <div className="from-group">
-          <label for="validationServer01">
+          <label className="text-start" for="validationServer01">
             Peso (kg):
             <input
               required
@@ -64,7 +64,7 @@ const BMIForm = () => {
           </label>
         </div>
         <div className="from-group">
-          <label>
+          <label className="text-start mt-2" >
             Altura (m):
             <input
               required

@@ -1,13 +1,23 @@
 // src/App.js
 import React from "react";
 import BMIForm from "../../../Components/BMIForm/BMIForm";
+import Image from "next/image";
 
-function App() {
+function BMI() {
   return (
-    <div className="container">
-      <h1>Calcula tu indice de masa corporal (IMC)</h1>
+    <div className="container-fluid g-0">
+      <Image
+        className="imagehero"
+        src="https://cdn.pixabay.com/photo/2017/09/08/10/27/slimming-2728332_1280.jpg"
+        alt="BMI"
+        priority={true}
+        width={100}
+        height={100}
+      />
+      <div className="container g-5">
+      <h1 className="mt-5">Calcula tu indice de masa corporal (IMC)</h1>
       <BMIForm />
-      <div>
+   
         <h1>Comprendiendo el IMC y Manteniendo un Rango Saludable</h1>
 
         <p>
@@ -99,9 +109,11 @@ function App() {
           mantenerse activo y cuidar tu salud en general, puedes trabajar para
           lograr un estilo de vida equilibrado y gratificante.
         </p>
+        <div>
+      </div>
       </div>
     </div>
   );
 }
 
-export default App;
+export default BMI;

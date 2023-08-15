@@ -20,7 +20,7 @@ export default function NutrientesCalculator() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    calculateNutrients({ text: data })
+    calculateNutrients({ items: data })
       .then((result) => {
         const data = result.data;
         const arrayOfObjects = JSON.parse(data);
