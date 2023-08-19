@@ -10,8 +10,9 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 exports.generateInfo = onCall(async (request) => {
-  const recipePrompt = "I want you to act as a Nutrition Facts Generator. I will provide you with a recipe and your role is to generate nutrition facts for that recipe. You should use your knowledge of nutrition science, nutrition facts labels and other relevant information to generate nutritional information for the recipe. Add each nutrition fact to a new line. I want you to only reply with the nutrition fact in the form of an array of json objects (ex. [{ingredient: 'ingredient name' protein: 'protein value', carbs: 'carbs value', fat: 'fat value', calories:'calories value'  } ]). Do not provide any other information. My recipe is: ";
+  // const recipePrompt = "I want you to act as a Nutrition Facts Generator. I will provide you with a recipe and your role is to generate nutrition facts for that recipe. You should use your knowledge of nutrition science, nutrition facts labels and other relevant information to generate nutritional information for the recipe even if the recipie does not contain the exact amount. Add each nutrition fact to a new line. I want you to only reply with the nutrition fact in the form of an array of json objects (ex. [{ingredient: 'ingredient name' protein: 'protein value', carbs: 'carbs value', fat: 'fat value', calories:'calories value'  } ]). Do not provide any other information. My recipe is: ";
   const recipe = request.data.text;
+  const recipePrompt = "Return nutrition facts in spanish. the response must be in this format [{ingredient: 'ingredient name' protein: 'protein value', carbs: 'carbs value', fat: 'fat value', calories:'calories value'  } ]"
 
   try {
     const options = {
@@ -24,7 +25,7 @@ exports.generateInfo = onCall(async (request) => {
 
     const result = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: `${recipePrompt}${recipe}` }],
+      messages: [{ role: "system", content: `${recipePrompt}${recipe}` }],
       max_tokens: 300,
       temperature: 0,
       n: 1,

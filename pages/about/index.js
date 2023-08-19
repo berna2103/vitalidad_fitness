@@ -4,7 +4,12 @@ import {
   httpsCallable,
 } from "firebase/functions";
 import { Form } from "react-bootstrap";
+import { loadStripe } from '@stripe/stripe-js';
 
+
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+);
 
 const Message = ({ message }) => (
   <section>
@@ -14,15 +19,18 @@ const Message = ({ message }) => (
 
 export default function Tienda() {
   const functions = getFunctions();
-    
   const [message, setMessage] = useState("");
+  const [product, setProduct] = useState("")
   const createCheckout = httpsCallable(functions, "stripeCreateCheckout");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    createCheckout({ text: "test" })
+    const stripe = await stripePromise
+    createCheckout({ text: "price_1NeSPNLBE5phxtPhUI5mIlYO" })
       .then((result) => {
+        const sessionId = result.data.id
         console.log(result)
+        stripe.redirectToCheckout({ sessionId: sessionId })
       })
       .catch((error) => {
         const code = error.code;

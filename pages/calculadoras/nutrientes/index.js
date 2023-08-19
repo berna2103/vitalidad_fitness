@@ -32,6 +32,7 @@ export default function NutrientesCalculator() {
         const code = error.code;
         const message = error.message;
         const details = error.details;
+        console.log(error)
       });
   };
   return (
@@ -101,6 +102,7 @@ export default function NutrientesCalculator() {
               <hr></hr>
               <p>Crea una cuenta para comenzar tu vida saludable.</p>
               <button className="btn btn-dark">Sign up</button>
+              
             </div>
           )}
         </div>
