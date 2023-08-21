@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Jumbotron({ title, message }) {
+export default function Jumbotron({ title, message, link, buttonText}) {
   return (
     <>
         <div className="jumbotron bg-light p-4 mt-5 mb-5">
@@ -8,7 +8,7 @@ export default function Jumbotron({ title, message }) {
          {!message ? <h3 className="lead">Aun no hay articulos en esta categoria.</h3> : <h3>{message}</h3>}
           <hr></hr>
           <p className="mt2">
-            <a href="/workouts">Otros articulos disponibles!</a>
+            <a href={link}>{buttonText}</a>
           </p>
         </div>
     </>

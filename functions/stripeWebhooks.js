@@ -2,6 +2,7 @@ require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 const { onRequest } = require("firebase-functions/v2/https");
+const admin = require('firebase-admin')
 
 const sendgrid = require("@sendgrid/mail");
 
@@ -38,7 +39,7 @@ exports.stripeWebhooks = onRequest(async (request, response) => {
 
       // Generate a unique download link for the user's purchased ebook
       //const downloadLink = await generateDownloadLink(session.customer_email, session.line_items.data[0].price.product);
-
+     await createOrder(id, email, name, downloadLink)
       // Send email with download link to customer
      await sendDownloadLinkEmail(email, name, downloadLink);
 
@@ -57,16 +58,28 @@ exports.stripeWebhooks = onRequest(async (request, response) => {
   }
 });
 
-async function createOrder(customerEmail, productId) {
+async function createOrder(id, name,  email, downloadLink) {
   // Generate download link logic here and store it in Firestore
+  const order = {
+    stripeCheckoutId: id,
+    name: name,
+    email: email,
+    downloadLink: downloadLink
+  }
+  try {
+    const db = admin.firestore()
+    await db.collection('orders').add(order)
+  } catch(error) {
+    console.log('Error', error)
+  }
 }
 
 async function sendDownloadLinkEmail(customerEmail, name, downloadLink) {
   const msg = {
     to: customerEmail,
     from: "sales@barciastech.com",
-    subject: "Your Ebook Download Link",
-    html: `Thank you for your purchase ${name}! Here is your <a href="${downloadLink}">download link</a>.`,
+    subject: "Descarga tu eBook",
+    html: `Gracias por tu compra ${name}! Aqui esta el enlace para descargar tu eBook: <p></p> <a href="${downloadLink}">Descargar!</a>.`,
   };
 
   try {

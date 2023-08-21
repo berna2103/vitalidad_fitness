@@ -1,32 +1,40 @@
 // This is your test secret API key.
 require("dotenv").config();
-const stripe = require("stripe")('sk_test_51NeS7JLBE5phxtPhCKoDyePOoC3iOQ2CRWnJNpmoROb9ZElGJu1i7jwUUxYcFsAPIsWY7OZOk8fMtJ9tlh4BGTP400wCFbIZBs');
+const stripe = require("stripe")(
+  process.env.STRIPE_KEY
+);
 const { onCall } = require("firebase-functions/v2/https");
-const YOUR_DOMAIN = 'https://vitalidadfitness.com/'
-// const { items } = req.body;
+const YOUR_DOMAIN = "https://vitalidadfitness.com/";
+
 exports.stripeCreatecheckout = onCall(async (data) => {
+  const { title, imgUrl, price, downloadLink, subtitle } = data.data.text;
 
-    // const { items } = req.body;
-    console.log(data.data)
-    const session = await stripe.checkout.sessions.create({
-      line_items: [
-        {
-          price: 'price_1NeSPNLBE5phxtPhUI5mIlYO',
-          quantity: 1,
+  const session = await stripe.checkout.sessions.create({
+    line_items: [
+      {
+        price_data: {
+          currency: "usd",
+          unit_amount: Number(price) * 100,
+          product_data: {
+            name: title,
+            description: subtitle,
+            images: [imgUrl],
+          },
         },
-      ],
-      metadata: {download: 'https://firebasestorage.googleapis.com/v0/b/virtual-fitness-coach-2103.appspot.com/o/4dayworkoutsmall.pdf?alt=media&token=e320f716-4c4c-4126-a144-09acc032da74'},
-      mode: 'payment',
-      //success_url: `${YOUR_DOMAIN}success`,
-      success_url: `${YOUR_DOMAIN}success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${YOUR_DOMAIN}canceled`,
-      automatic_tax: {enabled: true},
-    });
-    console.log(session)
-  
-    return {
-        id: session.id
-    }
+        quantity: 1,
+      },
+    ],
+    metadata: { download: downloadLink },
+    mode: "payment",
+    //success_url: `${YOUR_DOMAIN}success`,
+    success_url: `${YOUR_DOMAIN}success?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${YOUR_DOMAIN}canceled`,
+    automatic_tax: { enabled: true },
   });
+  console.log(session);
 
-
+  return {
+    id: session.id,
+    title: title,
+  };
+});

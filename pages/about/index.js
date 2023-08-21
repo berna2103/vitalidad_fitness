@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  getFunctions,
-  httpsCallable,
-} from "firebase/functions";
+
 import { Form } from "react-bootstrap";
 import { loadStripe } from '@stripe/stripe-js';
 
@@ -18,7 +15,7 @@ const Message = ({ message }) => (
 );
 
 export default function Tienda() {
-  const functions = getFunctions();
+ 
   const [message, setMessage] = useState("");
   const [product, setProduct] = useState("")
   const createCheckout = httpsCallable(functions, "stripeCreateCheckout");
