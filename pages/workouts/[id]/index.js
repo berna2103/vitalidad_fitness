@@ -56,14 +56,19 @@ export default function Workouts() {
             <div className="row p-4">
               <div className="col-lg-8 col-sm-12">
                 <h1 className="mt-3 mb-4">{workout.title}</h1>
-                {!workout.description ? <></> : <div className="border-start border-dark"><div className="mx-4"><BlogPostWithRichText content={workout.description} /></div> </div>}
+                {!workout.description ? (
+                  <></>
+                ) : (
+                  <div className="border-start border-dark">
+                    <div className="mx-4">
+                      <BlogPostWithRichText content={workout.description} />
+                    </div>{" "}
+                  </div>
+                )}
                 {workout.workouts ? (
-                  <div className="row mt-5">
+                  <div className="row g-2 mt-5">
                     {workout.workouts.map((workout, index) => (
-                      <div
-                        key={index}
-                        className="col-lg-4 col-md-4 col-12"
-                      >
+                      <div key={index} className="col-lg-4 col-md-4 col-12">
                         <BlogCard
                           blogPost={workout.fields}
                           author={false}

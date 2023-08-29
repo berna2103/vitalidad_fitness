@@ -8,7 +8,7 @@ const client = createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_TOKEN,
 });
 
-export default function Blog() {
+export default function Blog({title, description}) {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     client
@@ -23,13 +23,14 @@ export default function Blog() {
 
   return (
     <div className="container">
-      <h1 className="mt-3 mb-4">Articulos</h1>
-      <h4>
+      {title ? <h1>{title}</h1> : <h1 className="mt-3 mb-4">Articulos</h1> }
+      {description ? <h4>{description}</h4> :       <h4>
         Encuentra todo lo que necesitas para alcanzar tus objetivos de fitness,
         como rutinas de entrenamiento, planes de entrenamiento, videos de
         ejercicios gratuitos, consejos de fitness, tendencias de ejercicios,
         listas de reproducción para entrenar, equipamiento, ropa y más.
-      </h4>
+      </h4>}
+
 
       <div className="row mb-5 mt-5">
         <div className="col order-lg-0 order-1">

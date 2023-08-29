@@ -2,13 +2,14 @@ import React, { useEffect, useState, Suspense } from "react";
 import { createClient } from "contentful";
 import BlogCard from "../../Components/BlogCard";
 import LoadingSpinner from "../../Components/LoadingSpinner/LoadingSpinner";
+import PageTitleBannerImage from "../../Components/PageTitleBannerImage/PageTitleBannerImage";
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE,
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_TOKEN,
 });
 
-export default function Programs() {
+export default function Programs({ show, title, description }) {
   const [workoutCategories, setWorkoutCategories] = useState([]);
 
   useEffect(() => {
@@ -24,11 +25,15 @@ export default function Programs() {
 
   return (
     <div>
-      <img
-        className={`imagehero`}
-        src="https://cdn.pixabay.com/photo/2017/04/27/08/29/man-2264825_1280.jpg"
-        alt="coaching"
-      />
+      {!show ? (
+        <></>
+      ) : (
+        <PageTitleBannerImage
+          imgUrl="https://cdn.pixabay.com/photo/2017/04/27/08/29/man-2264825_1280.jpg"
+          alt="coaching"
+        />
+      )}
+
       <div className="container">
         <h1 className="display-6 mt-3">Rutinas de Ejercicio</h1>
         <h3>

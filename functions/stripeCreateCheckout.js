@@ -14,12 +14,15 @@ exports.stripeCreatecheckout = onCall(async (data) => {
       {
         price_data: {
           currency: "usd",
+          tax_behavior: "exclusive",
+           
           unit_amount: Number(price) * 100,
           product_data: {
             name: title,
             description: subtitle,
             images: [imgUrl],
-          },
+            tax_code: 'txcd_10302000',
+          }
         },
         quantity: 1,
       },
