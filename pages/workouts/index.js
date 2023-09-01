@@ -3,6 +3,7 @@ import { createClient } from "contentful";
 import BlogCard from "../../Components/BlogCard";
 import LoadingSpinner from "../../Components/LoadingSpinner/LoadingSpinner";
 import PageTitleBannerImage from "../../Components/PageTitleBannerImage/PageTitleBannerImage";
+import Head from 'next/head'
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE,
@@ -25,6 +26,11 @@ export default function Programs({ show, title, description }) {
 
   return (
     <div>
+      <Head>
+        <title>Vitalidad Fitness - Workouts Gratis!</title>
+        <meta name='description' content='Prepárate para transformar tu cuerpo. ¡Comienza tu viaje hoy mismo hacia una versión más fuerte y musculosa de ti!'></meta>
+        <meta name='keywords' content='Rutinas de ejercicio, workouts, musculo, entrenamientos gratis'></meta>
+      </Head>
       {!show ? (
         <></>
       ) : (
@@ -47,7 +53,7 @@ export default function Programs({ show, title, description }) {
                 {workoutCategories &&
                   workoutCategories.map((post, index) => {
                     return (
-                      <div key={index} className="col-lg-4 col-md-4 col-12">
+                      <div key={index} className="col-lg-4 col-md-6 col-12">
                         {" "}
                         <BlogCard
                           blogPost={post.fields}

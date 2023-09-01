@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Plan de nutrición",
+        "description": "Junto con el plan de ejercicio, recibirás un plan de nutrición adaptado a tus necesidades individuales. Nuestros nutricionistas te brindarán recomendaciones sobre tu ingesta calórica diaria, macronutrientes adecuados (proteínas, carbohidratos y grasas), así como consejos sobre elecciones alimentarias saludables y recetas deliciosas. Nos aseguraremos de que recibas la nutrición adecuada para alcanzar tus metas y mejorar tu bienestar general.",
+        "imgUrl": "https://cdn.pixabay.com/photo/2020/01/29/04/48/food-4801581_1280.jpg"
+    },
+    {
+        "title": "Evaluación y análisis",
+        "description": "Comenzamos por recopilar información clave sobre ti, como tu edad, peso, altura y metas fitness. Utilizando estos datos, nuestros expertos realizarán una evaluación detallada para comprender tus necesidades y limitaciones individuales. Basándonos en esta evaluación, diseñaremos un plan personalizado que se adapte a tu estilo de vida y te ayude a alcanzar tus metas de forma segura y efectiva.",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/18/13/52/form-1264999_1280.jpg"
+    },
+    {
+        "title": "Plan de ejercicio",
+        "description": "Nuestro equipo de entrenadores diseñará un programa de ejercicio personalizado teniendo en cuenta tus preferencias, nivel de condición física y metas específicas. Ya sea que prefieras entrenamientos en casa o en el gimnasio, te proporcionaremos una rutina detallada que incluirá ejercicios específicos, repeticiones, series y recomendaciones de descanso. Además, te ayudaremos a encontrar YouTube videos y tutoriales para asegurarnos de que realices los ejercicios correctamente y evites lesiones.",
+        "imgUrl": "https://cdn.pixabay.com/photo/2017/08/07/14/02/man-2604149_1280.jpg"
+    },
+    {
+        "title": "Seguimiento y apoyo continuo",
+        "description": "Nos comprometemos a brindarte un seguimiento constante y apoyo durante tu viaje fitness. Nuestro equipo estará disponible para responder a tus preguntas, proporcionarte orientación adicional y ajustar tus planes según sea necesario. Realizaremos un seguimiento semanal de tus progresos y te motivaremos para que sigas adelante en tu camino hacia una vida más saludable y en forma.",
+        "imgUrl": "https://cdn.pixabay.com/photo/2017/04/25/20/18/woman-2260736_1280.jpg"
+    }
+]

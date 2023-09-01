@@ -6,9 +6,18 @@ import BlogCard from "../../../Components/BlogCard";
 import BlogAuthor from "../../../Components/BlogAuthor/BlogAuthor";
 import LoadingSpinner from "../../../Components/LoadingSpinner/LoadingSpinner";
 import { useRouter } from "next/router";
-import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, PinterestIcon, PinterestShareButton, TwitterIcon, TwitterShareButton } from "react-share";
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  PinterestIcon,
+  PinterestShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+} from "react-share";
 import Image from "next/image";
-
+import Head from "next/head";
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE,
@@ -17,7 +26,7 @@ const client = createClient({
 
 export default function Pid() {
   const Id = useSearchParams().toString().slice(3);
-  const router = useRouter()
+  const router = useRouter();
   const [post, setPost] = useState({});
   const [morePosts, setMorePosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -55,11 +64,22 @@ export default function Pid() {
   }, [loading]);
 
   if (loading) {
-    return <LoadingSpinner/>;
+    return <LoadingSpinner />;
   }
 
   return (
     <div className="container-fluid g-0">
+      <Head>
+        {post ? (
+          <title>Vitalidad Fitness - {post.title} </title>
+        ) : (
+          <title>Vitalidad Fitness - Blog</title>
+        )}
+        <meta
+          name="description"
+          content={post.title}
+        ></meta>
+      </Head>
       {!post ? (
         <LoadingSpinner />
       ) : (

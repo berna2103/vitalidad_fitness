@@ -1,18 +1,22 @@
 import React from "react";
 import styles from "./coaching.module.css";
-import Image from "next/image"
+import Image from "next/image";
+import data from "../../Components/CoachingCard/coachingdata.json";
+import CoachingCard from "../../Components/CoachingCard/CoachingCard";
 
 export default function Coaching() {
   return (
     <>
       <div>
-        <Image 
-          className={`imagehero`}  
+        <Image
+          className={`imagehero`}
           priority={true}
           width={100}
           height={100}
           src="https://cdn.pixabay.com/photo/2017/04/27/08/29/man-2264825_1280.jpg"
-          alt="coaching" />
+          alt="coaching"
+        />
+
         <div className="container mb-5">
           <h1 className="display-3 mt-4 mb-4">
             Servicios de Coaching Personalizado
@@ -31,6 +35,7 @@ export default function Coaching() {
             </a>
           </div>
         </div>
+
         <div className="container-fluid bg-dark">
           <div className="container text-light pt-5">
             <h2 className="display-3">¿Qué ofrecemos?</h2>
@@ -40,114 +45,22 @@ export default function Coaching() {
               salud y estado físico.
             </p>
           </div>
+
           <div className="container">
             <div className="row g-3">
-              <div></div>
               <div className="container mt-5 mb-3">
-                <div className="row bg-light shadow-lg mb-3">
-                  <div className="col-lg-5 col-md-6 p-0 m-0">
-                    <img
-                      className={`${styles.imageContainer}`}
-                      src="https://cdn.pixabay.com/photo/2020/01/29/04/48/food-4801581_1280.jpg"
-                      alt="tacos"
-                    />
-                  </div>
-                  <div className="col-lg-7 col-md-6 p-5 my-auto">
-                    <h1 className="display-5 text-black">Plan de nutrición</h1>
-                    <p className="lead mt-5">
-                      Junto con el plan de ejercicio, recibirás un plan de
-                      nutrición adaptado a tus necesidades individuales.
-                      Nuestros nutricionistas te brindarán recomendaciones sobre
-                      tu ingesta calórica diaria, macronutrientes adecuados
-                      (proteínas, carbohidratos y grasas), así como consejos
-                      sobre elecciones alimentarias saludables y recetas
-                      deliciosas. Nos aseguraremos de que recibas la nutrición
-                      adecuada para alcanzar tus metas y mejorar tu bienestar
-                      general.
-                    </p>
-                  </div>
-                </div>
-              </div>{" "}
-              :
-              <div className="container mt-2 mb-2">
-                <div className="row bg-light shadow-lg mb-3">
-                  <div className="col-lg-7 col-md-6 p-5 my-auto order-lg-first order-md-first order-sm-last order-2">
-                    <h1 className="display-5 text-dark">
-                      Evaluación y análisis
-                    </h1>
-                    <p className="lead mt-5">
-                      Comenzamos por recopilar información clave sobre ti, como
-                      tu edad, peso, altura y metas fitness. Utilizando estos
-                      datos, nuestros expertos realizarán una evaluación
-                      detallada para comprender tus necesidades y limitaciones
-                      individuales. Basándonos en esta evaluación, diseñaremos
-                      un plan personalizado que se adapte a tu estilo de vida y
-                      te ayude a alcanzar tus metas de forma segura y efectiva.
-                    </p>
-                  </div>
-                  <div className="col-lg-5 col-md-6 p-0 m-0 order-lg-last order-md-last order-sm-first order-1">
-                    <img
-                      className={`${styles.imageContainer}`}
-                      src="https://cdn.pixabay.com/photo/2016/03/18/13/52/form-1264999_1280.jpg"
-                      alt="fitness"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div></div>
-            <div className="container mt-5 mb-3">
-              <div className="row bg-light shadow-lg mb-3">
-                <div className="col-lg-5 col-md-6 p-0 m-0">
-                  <img
-                    className={`${styles.imageContainer}`}
-                    src="https://cdn.pixabay.com/photo/2017/08/07/14/02/man-2604149_1280.jpg"
-                    alt="tacos"
+                {data.map((item, index) => (
+                  <CoachingCard
+                    index={index + 1}
+                    title={item.title}
+                    description={item.description}
+                    imgUrl={item.imgUrl}
                   />
-                </div>
-                <div className="col-lg-7 col-md-6 p-5 my-auto">
-                  <h1 className="display-5 text-black">Plan de ejercicio</h1>
-                  <p className="lead mt-5">
-                    Nuestro equipo de entrenadores diseñará un programa de
-                    ejercicio personalizado teniendo en cuenta tus preferencias,
-                    nivel de condición física y metas específicas. Ya sea que
-                    prefieras entrenamientos en casa o en el gimnasio, te
-                    proporcionaremos una rutina detallada que incluirá
-                    ejercicios específicos, repeticiones, series y
-                    recomendaciones de descanso. Además, te ayudaremos a
-                    encontrar YouTube videos y tutoriales para asegurarnos de
-                    que realices los ejercicios correctamente y evites lesiones.
-                  </p>
-                </div>
-              </div>
-            </div>{" "}
-            :
-            <div className="container mt-2 mb-2">
-              <div className="row bg-light shadow-lg mb-3">
-                <div className="col-lg-7 col-md-6 p-5 my-auto order-lg-first order-md-first order-sm-last order-2">
-                  <h1 className="display-5 text-dark">
-                    Seguimiento y apoyo continuo
-                  </h1>
-                  <p className="lead mt-5">
-                    Nos comprometemos a brindarte un seguimiento constante y
-                    apoyo durante tu viaje fitness. Nuestro equipo estará
-                    disponible para responder a tus preguntas, proporcionarte
-                    orientación adicional y ajustar tus planes según sea
-                    necesario. Realizaremos un seguimiento semanal de tus
-                    progresos y te motivaremos para que sigas adelante en tu
-                    camino hacia una vida más saludable y en forma.
-                  </p>
-                </div>
-                <div className="col-lg-5 col-md-6 p-0 m-0 order-lg-last order-md-last order-sm-first order-1">
-                  <img
-                    className={`${styles.imageContainer}`}
-                    src="https://cdn.pixabay.com/photo/2017/04/25/20/18/woman-2260736_1280.jpg"
-                    alt="fitness"
-                  />
-                </div>
+                ))}
               </div>
             </div>
           </div>
+
           <div className="container text-light pb-5 mt-5">
             <h2 className="display-6">¡Comienza tu viaje fitness hoy mismo!</h2>
             <p className="lead">

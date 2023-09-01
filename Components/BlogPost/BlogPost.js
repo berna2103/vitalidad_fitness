@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "contentful";
+import Head from 'next/head'
 import { useRouter } from "next/router";
 import {
   EmailShareButton,
   FacebookShareButton,
   PinterestShareButton,
   TwitterShareButton,
-  WhatsappShareButton,
   FacebookIcon,
   EmailIcon,
   TwitterIcon,
@@ -70,6 +70,10 @@ export default function BlogPost2() {
 
   return (
     <div className="container-fluid g-0">
+      <Head>
+        {!post ? <title>Vitalidad Fitness</title> :  <title>Vitalidad Fitness - {post.title}</title>}
+        {!post ? <> </> : <meta name="description" content={post.title}></meta>}
+      </Head>
       {!post ? (
         <LoadingSpinner />
       ) : (

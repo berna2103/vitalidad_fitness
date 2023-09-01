@@ -5,6 +5,7 @@ import BlogCard from "../../../Components/BlogCard";
 import { useRouter } from "next/router";
 import LoadingSpinner from "../../../Components/LoadingSpinner/LoadingSpinner";
 import Jumbotron from "../../../Components/Jumbotron/Jumbotron";
+import Head from 'next/head'
 
 // Create a Contentful client instance
 const client = createClient({
@@ -42,6 +43,11 @@ export default function Workouts() {
 
   return (
     <div>
+      <Head >
+        {workout ? <title>Vitalidad Fitness - {workout.title}</title> : <></>}
+        {workout ? <meta name="description" content={workout.title}></meta> : <></>}
+        {console.log(workout)}
+      </Head>
       {workout ? ( // Check if workout data is available
         <div>
           <img
@@ -54,7 +60,7 @@ export default function Workouts() {
           </p>
           <div className="container">
             <div className="row p-4">
-              <div className="col-lg-8 col-sm-12">
+              <div className="col-lg-12 col-sm-12">
                 <h1 className="mt-3 mb-4">{workout.title}</h1>
                 {!workout.description ? (
                   <></>
@@ -66,9 +72,9 @@ export default function Workouts() {
                   </div>
                 )}
                 {workout.workouts ? (
-                  <div className="row g-2 mt-5">
+                  <div className="row g-3 mt-5">
                     {workout.workouts.map((workout, index) => (
-                      <div key={index} className="col-lg-4 col-md-4 col-12">
+                      <div key={index} className="col-lg-4 col-md-6 col-sm-12 col-12">
                         <BlogCard
                           blogPost={workout.fields}
                           author={false}

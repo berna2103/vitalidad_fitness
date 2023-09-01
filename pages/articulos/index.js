@@ -2,6 +2,7 @@ import React, { useEffect, useState, Suspense } from "react";
 import { createClient } from "contentful";
 import BlogCard from "../../Components/BlogCard";
 import LoadingSpinner from "../../Components/LoadingSpinner/LoadingSpinner";
+import Head from 'next/head';
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE,
@@ -23,15 +24,20 @@ export default function Blog({title, description}) {
 
   return (
     <div className="container">
+      <Head>
+        {title ? <title>Vitalidad Fitness - {description} </title> : <title>Vitalidad Fitness - Blog</title>}
+        <meta name="description" content=" Encuentra todo lo que necesitas para alcanzar tus objetivos de fitness,
+        como rutinas de entrenamiento, planes de entrenamiento, videos de
+        ejercicios gratuitos, consejos de fitness, tendencias de ejercicios,
+        listas de reproducción para entrenar, equipamiento, ropa y más."></meta> 
+      </Head>
       {title ? <h1>{title}</h1> : <h1 className="mt-3 mb-4">Articulos</h1> }
-      {description ? <h4>{description}</h4> :       <h4>
+      {description ? <h4>{description}</h4> : <h4>
         Encuentra todo lo que necesitas para alcanzar tus objetivos de fitness,
         como rutinas de entrenamiento, planes de entrenamiento, videos de
         ejercicios gratuitos, consejos de fitness, tendencias de ejercicios,
         listas de reproducción para entrenar, equipamiento, ropa y más.
       </h4>}
-
-
       <div className="row mb-5 mt-5">
         <div className="col order-lg-0 order-1">
           <Suspense fallback={<LoadingSpinner />}>
@@ -39,7 +45,7 @@ export default function Blog({title, description}) {
               {posts &&
                 posts.map((post, index) => {
                   return (
-                    <div key={index} className="col-lg-4 col-md-4 col-12">
+                    <div key={index} className="col-lg-4 col-md-6 col-12">
                       {" "}
                       <BlogCard
                         blogPost={post.fields}
