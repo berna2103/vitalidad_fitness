@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../pages/coaching/coaching.module.css";
 import { animated, useInView } from "@react-spring/web";
 
-export default function CoachingCard({ index, title, description, imgUrl }) {
+export default function CoachingCard({ index, title, description, imgUrl, link }) {
 
   const [ref, springs] = useInView(
     () => ({
@@ -31,9 +31,10 @@ export default function CoachingCard({ index, title, description, imgUrl }) {
               alt={title}
             />
           </div>
-          <div className="col-lg-7 col-md-6 p-5 my-auto">
+          <div className="col-lg-7 col-md-6 p-5 my-auto card rounded-0 border-0">
             <h1 className="display-5 text-black">{title}</h1>
             <p className="lead mt-5">{description}</p>
+            {!link ? <> </> : <a className="stretched-link" href={link}>{description}</a>}
           </div>
         </div>
       </animated.div>

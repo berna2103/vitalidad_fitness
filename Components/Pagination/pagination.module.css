@@ -1,0 +1,10 @@
+/* custom-pagination.css */
+.custompagination .page-item.active .page-link {
+    background-color: black !important;
+    border-color: black !important;
+  }
+  
+  .custom-pagination .page-link {
+    color: red !important;
+  }
+  

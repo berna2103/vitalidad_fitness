@@ -54,7 +54,7 @@ function NavigationBar() {
                 className={`rounded-3 mx-2 my-auto ${styles.navitem}`}
                 href="/articulos"
               >
-                Articulos
+                Blog
               </Nav.Link>
 
               <NavDropdown
